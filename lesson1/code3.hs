@@ -1,0 +1,1 @@
+inputFunction person = person ++ "!\n"
