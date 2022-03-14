@@ -7,7 +7,7 @@ myTake n list
 
 myTakeButFaster :: Int -> [Int] -> [Int]
 myTakeButFaster n (x :list)
-    | n > 0 = x :take (n-1) list
+    | n > 0 = x :myTakeButFaster (n-1) list
 myTakeButFaster _ _ = []
 
 myHead :: [Int] -> Int
