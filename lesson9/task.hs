@@ -19,5 +19,9 @@ task2IsPalindrome str =
 
 task3Harmonic num = foldl (+) 0 [1/2, 1/3 .. 1/num]
 
+task3HarmonicRec num
+    | num <= 2 = 1/2
+    | otherwise = 1/num + task3HarmonicRec (num-1)
+
 main :: IO ()
 main = print $ task2IsPalindrome "A roza ypala na lapy Azora"
